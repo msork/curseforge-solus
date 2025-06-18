@@ -25,6 +25,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="data">/opt</Path>
             <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/icons</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency>libgtk-3</Dependency>
