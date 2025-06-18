@@ -9,10 +9,7 @@ wget 'https://curseforge.overwolf.com/downloads/curseforge-latest-linux.deb' -O 
 ar xf curseforge-latest-linux.deb
 tar zxvf control.tar.gz ./control
 VERSION=$(sed -n 2p control | grep -Po '(?<=Version: )\d+\.\d+\.\d+')
-rm debian-binary data.tar.xz control control.tar.gz
-
-# RENAME DEB
-mv curseforge-latest-linux.deb curseforge-$VERSION.deb
+rm debian-binary data.tar.xz control control.tar.gz curseforge-latest-linux.deb
 
 # COPY SCRIPT AND FILES
 wget 'https://raw.githubusercontent.com/msork/curseforge-solus/refs/heads/master/scripts/ep-update.py' -O ep-update.py
