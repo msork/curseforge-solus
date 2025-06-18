@@ -25,5 +25,5 @@ sudo eopkg bi --ignore-safety pspec.xml
 sudo eopkg it -y ./*.eopkg
 
 # REMOVE FILES
-#sudo rm -rf ~/Downloads/curseforge-updater
-#sudo rm ~/Downloads/curseforge-$SVER.x86_64.rpm
+sudo rm -rf ~/Downloads/curseforge-updater
+sudo rm ~/Downloads/curseforge-updater/curseforge-*.eopkg
