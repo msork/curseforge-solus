@@ -11,7 +11,7 @@ Version = get.srcVERSION()
 
 def setup():
     shelltools.system("pwd")
-    shelltools.system("ar xf curseforge-%s.deb" % Version)
+    shelltools.system("ar xf curseforge-latest-linux.deb")
     shelltools.system("tar xf data.tar.gz")
 
 def install():

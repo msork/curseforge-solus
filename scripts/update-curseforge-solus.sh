@@ -8,19 +8,20 @@ cd ~/Downloads/curseforge-updater
 wget 'https://curseforge.overwolf.com/downloads/curseforge-latest-linux.deb' -O curseforge-latest-linux.deb
 ar xf curseforge-latest-linux.deb
 tar zxvf control.tar.gz ./control
-VERSION=$(sed -n 2p control | grep -Po '(?<=Version: )\S+')
+VERSION=$(sed -n 2p control | grep -Po '(?<=Version: )\d+\.\d+\.\d+')
+rm debian-binary data.tar.xz control control.tar.gz
 
 # RENAME DEB
 mv curseforge-latest-linux.deb curseforge-$VERSION.deb
 
 # COPY SCRIPT AND FILES
-wget 'https://raw.githubusercontent.com/msork/curseforge-solus/refs/heads/scripts/ep-update.py' -O ep-update.py
-wget 'https://raw.githubusercontent.com/msork/curseforge-solus/refs/heads/main/games/curseforge/actions.py' -O actions.py
-wget 'https://raw.githubusercontent.com/msork/curseforge-solus/refs/heads/main/games/curseforge/pspec.xml' -O pspec.xml
+wget 'https://raw.githubusercontent.com/msork/curseforge-solus/refs/heads/master/scripts/ep-update.py' -O ep-update.py
+wget 'https://raw.githubusercontent.com/msork/curseforge-solus/refs/heads/master/games/curseforge/actions.py' -O actions.py
+wget 'https://raw.githubusercontent.com/msork/curseforge-solus/refs/heads/master/games/curseforge/pspec.xml' -O pspec.xml
 
 # RUN SCRIPT
 chmod +x ep-update.py
-./ep-update.py $VERSION ./curseforge-$VERSION.deb
+./ep-update.py $VERSION https://curseforge.overwolf.com/downloads/curseforge-latest-linux.deb
 
 # BUILD AND INSTALL EOPKG
 sudo eopkg bi --ignore-safety pspec.xml
