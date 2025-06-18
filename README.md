@@ -7,7 +7,10 @@ For more information about 3rd party applications in Solus, visit our Help Cente
 
 ## Installing Packages (easy method)
 
-Head over to the [releases page](https://github.com/msork/my-3rdparty-solus/releases) and download the latest release for your favourite app.
+Head over to the [releases page](https://github.com/msork/my-3rdparty-solus/releases) and download the latest release for your favourite app, then install it using the following command, replacing <package_name> with the name of the file you downloaded:
+```
+sudo eopkg it ./<package_name>.eopkg
+```
 
 ## Installing Packages manually (harder method)
 
