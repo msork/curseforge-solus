@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://getsol.us/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>cider</Name>
+        <Packager>
+            <Name>Maxim Sorkin</Name>
+            <Email>msork.uni2004@gmail.com</Email>
+        </Packager>
+        <Summary>A cross-platform Apple Music experience built on Vue.js and written from the ground up with performance in mind.</Summary>
+        <Description>A cross-platform Apple Music experience built on Vue.js and written from the ground up with performance in mind.</Description>
+        <License>Copyright (c) 2025 Cider Collective.</License>
+        <Archive sha1sum="edcc77ee83d140e8fe29c4f100acfea151bae7c1" type="binary">https://repo.cider.sh/apt/pool/main/cider-v3.0.0-linux-x64.deb</Archive>
+
+        <BuildDependencies>
+            <Dependency>binutils</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>cider</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/lib/cider</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/lintian/overrides</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>libgtk-3</Dependency>
+            <Dependency>libnotify</Dependency>
+            <Dependency>libnss</Dependency>
+            <Dependency>xdg-utils</Dependency>
+            <Dependency>at-spi2</Dependency>
+            <Dependency>libdrm</Dependency>
+            <Dependency>mesalib</Dependency>
+            <Dependency>gvfs</Dependency>
+        </RuntimeDependencies>
+
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>06-17-2025</Date>
+            <Version>3.0.0</Version>
+            <Comment>Add cider to repo</Comment>
+            <Name>Maxim Sorkin</Name>
+            <Email>msork.uni2004@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
