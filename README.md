@@ -1,7 +1,7 @@
 My 3rd Party Packages for Solus 
 =============================
 
-This repo contains the build files required to create the CurseForge eopkg package.
+This repo contains the build files required to create some 3rd-party eopkg packages.
 
 For more information about 3rd party applications in Solus, visit our Help Center page at https://help.getsol.us/docs/user/software/third-party/.
 
